@@ -98,21 +98,23 @@ researcher.excluded_groups = (function()
   return exclude
 end)()
 
--- Load secondary files
-local mpath = minetest.get_modpath("researcher")
-local function runfile(file)
-  dofile(mpath .. "/src/" .. file .. ".lua")
-end
+-- Load secondary files if the Epiphany content pack is enabled in Asuna settings
+if asuna.content.epiphany.enabled then
+  local mpath = minetest.get_modpath("researcher")
+  local function runfile(file)
+    dofile(mpath .. "/src/" .. file .. ".lua")
+  end
 
-for _,file in ipairs({
-  "api",
-  "inventory",
-  "bonuses",
-  "research_table",
-  "scan",
-  "commands",
-  "gui",
-  "awards",
-}) do
-  runfile(file)
+  for _,file in ipairs({
+    "api",
+    "inventory",
+    "bonuses",
+    "research_table",
+    "scan",
+    "commands",
+    "gui",
+    "awards",
+  }) do
+    runfile(file)
+  end
 end
