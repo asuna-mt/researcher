@@ -98,8 +98,8 @@ researcher.excluded_groups = (function()
   return exclude
 end)()
 
--- Load secondary files if the Epiphany content pack is enabled in Asuna settings
-if asuna.content.epiphany.enabled then
+-- Load secondary files if the Research content pack is enabled in Asuna settings
+if asuna.content.research.enabled then
   local mpath = minetest.get_modpath("researcher")
   local function runfile(file)
     dofile(mpath .. "/src/" .. file .. ".lua")
