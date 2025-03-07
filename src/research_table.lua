@@ -168,7 +168,7 @@ minetest.register_abm({
           maxacc = { x = 0, y = 0.2, z = 0 },
           minexptime = 4.5,
           maxexptime = 3,
-          texture = "cdb_add.png^[colorize:#ffff77^[opacity:180",
+          texture = "plus.png^[colorize:#ffff77^[opacity:180",
           glow = 14,
           collisiondetection = false,
         })

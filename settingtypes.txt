@@ -63,7 +63,7 @@ researcher.discount_stack_max (Discount for items with low max stacks) int -250 
 researcher.discount_mapgen (Discount for items not in mapgen) int -400 -10000 0
 
 # The research point discount for items that cannot be crafted
-researcher.discount_not_craftable (Discount for non-craftable items) -250 -10000 0
+researcher.discount_not_craftable (Discount for non-craftable items) int -250 -10000 0
 
 [Awards]
 
